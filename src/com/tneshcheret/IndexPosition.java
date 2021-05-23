@@ -5,7 +5,7 @@ public class IndexPosition implements StringWorker {
 
     @Override
     public int execute(String sentence, String word) {
-        if (sentence.contains(" " + word + " ")) {
+        if (sentence.contains(" " + word + " ") || sentence.contains(" " + word) || sentence.contains(word + " ")) {
             String[] partsSentence = sentence.split("\\s+");
             int numberCharacters = 0;
             for (String s : partsSentence) {
