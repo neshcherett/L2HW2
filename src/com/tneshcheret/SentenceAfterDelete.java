@@ -6,7 +6,7 @@ public class SentenceAfterDelete implements StringWorker {
     @Override
     public int execute(String sentence, String word) {
         String s = " " + word;
-        String newSentence = sentence.replace(s, " ");
+        String newSentence = sentence.replaceAll(word, "");
         return newSentence.length();
     }
 }
